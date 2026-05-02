@@ -1,25 +1,32 @@
 {
-  "name": "grocery-list",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "groceries",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "w-ts": "rm dist/js/*.js*; tsc --strict -w --removeComments --sourceMap src/ts/script.ts --outDir dist/js/",
-    "w-sass": "rm dist/css/*.css*; sass -w src/sass/style.scss dist/css/style.css",
-    "t-ts": "rm dist/js/*.js*; tsc --strict --removeComments --sourceMap src/ts/script.ts --outDir dist/js/",
-    "t-sass": "rm dist/css/*.css*; sass src/sass/style.scss dist/css/style.css",
-    "m-js": "uglifyjs dist/js/script.js -o dist/js/script.min.js",
-    "m-css": "uglifycss dist/css/style.css > dist/css/style.min.css",
-    "tm-style": "npm run t-sass; npm run m-css",
-    "tm-script": "npm run t-ts; npm run m-js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "motion": "^12.38.0",
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-icons": "^5.6.0",
+    "tailwind-merge": "^3.5.0",
+    "uuid": "^14.0.0",
+    "zod": "^4.4.2",
+    "zustand": "^5.0.12"
+  },
   "devDependencies": {
-    "sass": "^1.77.4",
-    "typescript": "^5.4.5",
-    "uglify-js": "^3.17.4",
-    "uglifycss": "^0.0.29"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
